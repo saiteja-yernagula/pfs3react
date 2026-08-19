@@ -1,0 +1,92 @@
+React- react is a open source js library used to build single page 
+application
+
+why react
+virtual dom- its a copy of real dom---comparision using diffing 
+            -this entire process is called reconcialation
+
+single page applicaton - only one index.html
+
+component based architecture- reusabe components -which reduces the code
+
+components- 
+it is a reusable piece of code that renders part of UI
+
+types of components
+class components-life cycle methods
+
+functional components- hooks (built in functions)
+
+
+
+react renders page only whenever the state changes
+
+state 
+it is a like a variable which stores the data and which handle dynamic data of
+the component
+
+useState()
+it is a hook(built in function) that is used to manage the state
+
+import {useState} from 'react'
+
+let [state,setState]=useState(initialvalue)
+
+let [count,setCount]=useState(0)
+
+notes
+count---it is a state which holds the data
+setCount---it is a function which controls the count value
+
+
+useEffect()
+it is a hook that is used to manage side effects of a react application
+such as api calling, settimeout ,setinterval and localstorage
+
+three types of useEffect
+1) useEffect without any depenedency- it will run every time whenever the state changes
+
+
+import {useEffect} from 'react'
+
+async function getapidata(){
+    //api logic
+}
+useEffect(()=>{
+    getapidata()
+})
+
+
+2) useEffect with empty depenedency- it runs only once 
+import {useEffect} from 'react'
+
+async function getapidata(){
+    //api logic
+}
+useEffect(()=>{
+    getapidata()
+},[])
+3) useEffect with  depenedency values- it will run whenever the depenedency value 
+changes
+import {useEffect} from 'react'
+
+async function getapidata(){
+    //api logic
+}
+useEffect(()=>{
+    getapidata()
+},[apidata])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
