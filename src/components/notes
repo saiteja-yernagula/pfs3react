@@ -79,9 +79,43 @@ useEffect(()=>{
 
 
 
+1) npm install react-router-dom
 
+2) configuration
 
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
+<BrowserRouter>
+<Routes>
+<Route path='/' element={<Home/>}/>
+<Route path='/contact' element={<Contact/>}/>
+</Routes>
+</BrowserRouter>
+
+3) useNavigate()
+it is used for programatical navigation
+
+import {useNavigate} from 'react-router-dom'
+
+let navigate=useNavigate()
+
+<button onClick={()=>navigate('/')}>home</button>
+<button onClick={()=>navigate('/contact')}>contact</button>
+<button onClick={()=>navigate('/services')}>services</button>
+
+4)
+//dynamical routing
+<button onClick={()=>navigate('/doctordetails/${id}')}>view details</button>
+useParams()
+it is used to get the id from the url
+
+import {useParams} from 'react-router-dom'
+
+{id}=useParams()--2
+
+1
+2
+3
 
 
 
