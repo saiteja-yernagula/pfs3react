@@ -69,7 +69,7 @@ function Home({newdoctor}) {
 
     <div className='doctorcontainer'>
         {filtereddoctors.length>0 ?(filtereddoctors.map((doctor)=>(
-           <Doctorcard key={doctor.id} name={doctor.name} gender={doctor.gender}
+           <Doctorcard id={doctor.id} key={doctor.id} name={doctor.name} gender={doctor.gender}
             specialization={doctor.specialization}/>
         ))): <h1>loading....</h1>} 
       
