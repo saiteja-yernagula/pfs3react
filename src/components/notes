@@ -126,7 +126,7 @@ how to fetch an api
 1) npm install axios
 
 2)
-import axios from 'axios;
+import axios from 'axios';
 import {useState,useEffect} from react;
 
 let [doctors,setDoctors]=useState([])
