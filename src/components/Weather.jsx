@@ -9,10 +9,11 @@ function Weather() {
     async function getweather(e){
         e.preventDefault()
         console.log(city)
-
         let url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=466ddaa21a8de191e9f608bd11a56acb`
-
-        
+        let response= await axios.get(url)
+        setWeather(response.data)
+        console.log(response.data)
+        console.log(response.data.main.temp)
     }
   return (
     <div>
@@ -20,6 +21,7 @@ function Weather() {
             <input type="text" value={city} onChange={(e)=>setCity(e.target.value)} placeholder="enter city name" />
             <button type='submit'>search</button>
         </form>
+        {weather && <h1>{weather.main.temp}</h1>}
     </div>
   )
 }
