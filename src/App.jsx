@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import Section from "./components/Section"
 import './components/styles.css'
 import { Routes,Route } from "react-router-dom"
+import Weather from "./components/Weather"
 
 // import { useState } from "react"
 // import { useEffect } from "react"
@@ -26,6 +27,7 @@ function App() {
         <Route path='/' element={<Section/>}/>
         <Route path='/add-doctor' element={<Addnewdoctor/>}/>
         <Route path='/doctordetails/:id' element={<Doctordetails/>}/>
+        <Route path='/weather' element={<Weather/>}/>
       </Routes>
     
 {/* <div className='doctorcontainer'>

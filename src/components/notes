@@ -142,6 +142,17 @@ useEffect(()=>{
 },[])
 
 
+step 1
+
+
+create Weather.jsx
+enter rfce
+define the route in app.jsx
+
+import useState,useEffect axios in Weather.jsx
+take input store the value in city state
+
+
 
 
 
