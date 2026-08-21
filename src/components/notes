@@ -119,6 +119,29 @@ import {useParams} from 'react-router-dom'
 
 
 
+how to fetch an api 
+1) fetch method ----data ----data.json()
+2) axios- library for handling api
+
+1) npm install axios
+
+2)
+import axios from 'axios;
+import {useState,useEffect} from react;
+
+let [doctors,setDoctors]=useState([])
+
+async function getapidata(){
+    let response=await axios.get('https://doctorapibackend.onrender.com/doctors')//{}
+    console.log(response.data)
+    setDoctors(response.data)
+}
+
+useEffect(()=>{
+ getapidata()
+},[])
+
+
 
 
 
