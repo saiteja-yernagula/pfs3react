@@ -156,5 +156,30 @@ take input store the value in city state
 
 
 
+http methods
+1) get 
+2) post
+
+import axios from 'axios'
+import {useState} from 'react'
+
+let [form,setForm]=useState("")
+
+async function submithandler(){
+    await axios.post('https://doctorapibackend.onrender.com/doctors',form)
+   alert('data posted successfully')
+   setNewdoctor('posted')
+}
+
+
+async function deletedata(id){
+    await axios.delete(`https://doctorapibackend.onrender.com/doctors/${id}`)
+    alert('deleteed')
+    setNewdoctor('deleted')
+}
+
+
+
+
 
 
