@@ -26,6 +26,22 @@ async function deletedata(id){
 }
 
 
+async function updatedata(id){
+    let data={
+        name:prompt('enter a name'),
+        age:25,
+        specialization:'ortho',
+        gender:'female',
+        salary:23333,
+        id
+    }
+    await axios.put(`https://doctorapibackend.onrender.com/doctors/${id}`,data)
+    alert('updated')
+    setNewdoctor('updated')
+
+}
+
+
   return (
     <div>
       <form action="" className="form-container" onSubmit={handleform}>
@@ -66,7 +82,7 @@ async function deletedata(id){
         />
         <button type="submit">Add doctor</button>
       </form>
-      <Home newdoctor={newdoctor} deletedata={deletedata} />
+      <Home updatedata={updatedata} newdoctor={newdoctor} deletedata={deletedata} />
     </div>
   );
 }

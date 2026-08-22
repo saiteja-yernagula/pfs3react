@@ -2,7 +2,7 @@ import { useState,useEffect } from "react";
 import Doctorcard from "./Doctorcard";
 import axios from 'axios'
 
-function Home({newdoctor,deletedata}) {
+function Home({newdoctor,deletedata,updatedata}) {
     let [doctors,setDoctors]=useState([])
 
     let [search ,setSearch]=useState('')
@@ -43,7 +43,7 @@ function Home({newdoctor,deletedata}) {
 
     <div className='doctorcontainer'>
         {filtereddoctors.length>0 ?(filtereddoctors.map((doctor)=>(
-           <Doctorcard deletedata={deletedata} id={doctor.id} key={doctor.id} name={doctor.name} gender={doctor.gender}
+           <Doctorcard updatedata={updatedata} deletedata={deletedata} id={doctor.id} key={doctor.id} name={doctor.name} gender={doctor.gender}
             specialization={doctor.specialization}/>
         ))): <h1>loading....</h1>} 
       

@@ -1,6 +1,6 @@
 
 import { useNavigate } from "react-router-dom"
-function Doctorcard({name,specialization,gender,id,deletedata}) {
+function Doctorcard({name,specialization,gender,id,deletedata,updatedata}) {
   let navigate=useNavigate()
   return (
     <div className='card'>
@@ -12,6 +12,7 @@ function Doctorcard({name,specialization,gender,id,deletedata}) {
         <p>{gender}</p>
         <button onClick={()=>navigate(`/doctordetails/${id}`)}>view details</button>
         <button onClick={()=>deletedata(id)}>Delete </button>
+        <button onClick={()=>updatedata(id)}>update</button>
 
     </div>
   )
